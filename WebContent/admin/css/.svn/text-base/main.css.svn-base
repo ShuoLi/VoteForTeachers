@@ -1,0 +1,86 @@
+.ui-tabs {
+    padding: 0;
+	margin:0;
+}
+
+.ui-tabs .ui-tabs-nav {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    position: relative;
+    float: left;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    float: left;
+    text-decoration: none;
+    padding: 0;
+}
+
+.ui-tabs .ui-tabs-nav li a.ui-tabs-selected {
+	color:#ffffff;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+    background-color:#006666;
+}
+
+.ui-tabs .ui-tabs-hide {
+    display: none;
+}
+
+.ui-tabs textarea {
+    width: 100%;
+    border: 1px solid #0080ff;
+	height: 300px;
+}
+
+.ui-tabs hr {
+    clear:both;
+    margin:0;
+	padding:0;
+}
+
+#avatarUpload{
+	border:2px dashed #c0c0c0;
+	width:90%;
+}
+
+#archiveID{
+	font-size:200%;
+	padding-bottom:20px;
+}
+
+#basicInfo{
+	margin:10px 20px;
+}
+
+label{
+	display:inline-block;
+	width:100px;
+	padding-right:5px;
+	padding-left:10px;
+	color:#363636;
+	text-align:right;
+}
+
+
+#form{
+	padding-left:20px;
+	width:800px;
+	border:1px solid #c0c0c0;
+}
+
+#subbmitDiv{
+	background-color:#c0c0c0;
+	width:100%;
+	text-align:left;
+}
+
+

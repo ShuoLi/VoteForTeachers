@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/vote/!svn/ver/124/src/cn/neu/pioneer/vote/vote/dao
+END
+VoteDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/vote/!svn/ver/124/src/cn/neu/pioneer/vote/vote/dao/VoteDaoImpl.java
+END
+IVoteDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/vote/!svn/ver/124/src/cn/neu/pioneer/vote/vote/dao/IVoteDao.java
+END
+VoteSQL.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/vote/!svn/ver/124/src/cn/neu/pioneer/vote/vote/dao/VoteSQL.xml
+END

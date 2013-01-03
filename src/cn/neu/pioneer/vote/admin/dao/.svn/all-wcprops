@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/vote/!svn/ver/29/src/cn/neu/pioneer/vote/admin/dao
+END
+AdministratorDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/vote/!svn/ver/29/src/cn/neu/pioneer/vote/admin/dao/AdministratorDaoImpl.java
+END
+AdminSQL.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/vote/!svn/ver/29/src/cn/neu/pioneer/vote/admin/dao/AdminSQL.xml
+END
+IAdministratorDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/vote/!svn/ver/29/src/cn/neu/pioneer/vote/admin/dao/IAdministratorDao.java
+END

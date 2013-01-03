@@ -1,0 +1,96 @@
+/*
+ 选票
+ */
+#toContainer {
+    border: 2px dashed #c0c0c0;
+	min-height:100px;
+	text-align:left;
+}
+
+#toContainer tr {
+    display: none;
+}
+
+#toContainer .pic {
+    display: block;
+}
+
+#toContainer .teacherName {
+    display: block;
+}
+
+#toContainer .avatar {
+	width:20%;
+	
+}
+
+/*
+选项
+ */
+#option {
+    clear: both;
+    margin: 0px 20px;
+    background-color: #eeeeee;
+	text-align: left;
+	padding:5px 5px;
+	font-size:80%;
+}
+
+#option button {
+	border:0px;
+	background-color:#c0c0c0;
+	color:#ffffff;
+}
+
+#option a{
+	border:0;
+	text-decoration:none;
+	color:#E8E8E8;
+}
+
+#option p{
+	padding:0;
+	margin:0;
+}
+
+/*
+候选区
+*/
+#fromContainer {
+	height:600px;
+	overflow-y:scroll;
+}
+
+/*
+ 头像
+ */
+.avatar {
+    border: 1px solid #c0c0c0;
+    width: 110px;
+	display:inline-block;
+	vertical-align:-2px;
+}
+
+.avatar img {
+	width:100%;
+}
+
+.avatar table {
+    width: 100%;
+}
+
+.avatar tr {
+    width: 100%;
+}
+
+.avatar td {
+    width: 50%;
+	overflow-x:hidden;
+}
+
+.avatar .ui-draggable-dragging {
+	background-color:#ff0000;
+}
+
+
+

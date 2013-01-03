@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+ "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="voteDao" class="cn.neu.pioneer.vote.vote.dao.VoteDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"/>
+	</bean>
+	<bean id="voteManager" class="cn.neu.pioneer.vote.vote.service.VoteManagerImpl">
+		<property name="voteDao" ref="voteDao"/>
+	</bean>
+	<bean id="voteAction" class="cn.neu.pioneer.vote.vote.web.VoteAction" scope="prototype" >
+		<property name="teacherManager" ref="teacherManager"/>
+		<property name="voteManager" ref="voteManager"/>
+	</bean>
+</beans>

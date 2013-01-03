@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/vote/!svn/ver/27/src/cn/neu/pioneer/vote/student/dao
+END
+IStudentDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/vote/!svn/ver/27/src/cn/neu/pioneer/vote/student/dao/IStudentDao.java
+END
+StudentSQL.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/vote/!svn/ver/27/src/cn/neu/pioneer/vote/student/dao/StudentSQL.xml
+END
+StudentDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/vote/!svn/ver/27/src/cn/neu/pioneer/vote/student/dao/StudentDaoImpl.java
+END

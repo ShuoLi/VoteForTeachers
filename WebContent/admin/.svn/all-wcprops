@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/vote/!svn/ver/139/WebContent/admin
+END
+addTeacher.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/vote/!svn/ver/138/WebContent/admin/addTeacher.jsp
+END
+turn.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/vote/!svn/ver/89/WebContent/admin/turn.jsp
+END
+statisticsVote.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/vote/!svn/ver/80/WebContent/admin/statisticsVote.jsp
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/vote/!svn/ver/20/WebContent/admin/.project
+END
+error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/vote/!svn/ver/25/WebContent/admin/error.jsp
+END
+menu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/vote/!svn/ver/136/WebContent/admin/menu.jsp
+END
+config.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/vote/!svn/ver/135/WebContent/admin/config.jsp
+END
+listTeacher.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/vote/!svn/ver/86/WebContent/admin/listTeacher.jsp
+END
+index.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/vote/!svn/ver/80/WebContent/admin/index.jsp
+END
+success.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/vote/!svn/ver/25/WebContent/admin/success.jsp
+END
+login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/vote/!svn/ver/114/WebContent/admin/login.jsp
+END
+export_success.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/vote/!svn/ver/91/WebContent/admin/export_success.jsp
+END
+listVote.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/vote/!svn/ver/80/WebContent/admin/listVote.jsp
+END
+logout.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/vote/!svn/ver/87/WebContent/admin/logout.jsp
+END
+changePass.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/vote/!svn/ver/125/WebContent/admin/changePass.jsp
+END
+export.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/vote/!svn/ver/91/WebContent/admin/export.jsp
+END
+editTeacher.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/vote/!svn/ver/139/WebContent/admin/editTeacher.jsp
+END

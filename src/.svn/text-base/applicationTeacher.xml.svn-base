@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+ "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="teacherDao" class="cn.neu.pioneer.vote.teacher.dao.TeacherDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"/>
+	</bean>
+	<bean id="teacherManager" class="cn.neu.pioneer.vote.teacher.service.TeacherManagerImpl">
+		<property name="teacherDao" ref="teacherDao"/>
+	</bean>
+	<bean id="uploadAction" class="cn.neu.pioneer.vote.teacher.web.UploadAction" scope="prototype" >
+	</bean>
+	<bean id="teacherAction" class="cn.neu.pioneer.vote.teacher.web.TeacherAction" scope="prototype" >
+		<property name="teacherManager" ref="teacherManager"/>
+		<property name="messageManager" ref="messageManager"/>
+		<property name="voteManager" ref="voteManager"/>
+	</bean>
+</beans>

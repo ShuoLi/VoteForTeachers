@@ -1,0 +1,16 @@
+h1{
+	font-style:italic;
+	size:60%;
+	color:#c0c0c0;
+	margin-bottom:4px;
+}
+
+form{
+	border:1px solid #c0c0c0;
+}
+
+
+#submitDiv{
+	background-color:#c0c0c0;
+	padding:10px;
+}

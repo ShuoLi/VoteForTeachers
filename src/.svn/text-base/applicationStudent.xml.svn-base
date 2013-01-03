@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+ "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="studentDao" class="cn.neu.pioneer.vote.student.dao.StudentDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"/>
+	</bean>
+	<bean id="studentManager" class="cn.neu.pioneer.vote.student.service.StudentManagerImpl">
+		<property name="studentDao" ref="studentDao"/>
+	</bean>
+	
+	<bean id="studentAction" class="cn.neu.pioneer.vote.student.web.StudentAction" scope="prototype" >
+		<property name="studentManager" ref="studentManager"/>
+		<property name="voteManager" ref="voteManager"/>	
+	</bean>
+</beans>

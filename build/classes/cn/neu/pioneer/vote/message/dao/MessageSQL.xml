@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+
+<sqlMap namespace="VOTE_MESSAGE">
+	
+	<typeAlias alias="message" type="cn.neu.pioneer.vote.message.to.Message" />
+	
+    <resultMap id="get-message-result" class="message">
+    	<result column="messageId" property="messageId"/>
+        <result column="teacherId" property="teacherId"/>
+    	<result column="studentId" property="studentId"/> 	
+		<result column="message"   property="message"/>
+    	<result column="time" property="time"/>
+    	<result column="ip" property="ip"/>
+    </resultMap>
+       
+    <insert id="message.insert" parameterClass="message">
+		insert into message(teacherId,studentId,message,time,ip)
+		values(#teacherId#,#studentId#,#message#,#time#,#ip#)
+	</insert>
+ 
+	<delete id="message.delete" parameterClass="int">
+		delete from message where messageId=#messageId#
+	</delete>
+	
+	<select id="message.getList" resultMap="get-message-result" parameterClass="java.util.HashMap">
+		select * 
+		from message
+		where teacherId=#teacherId# 
+		order by time desc
+		limit #start#,#count#
+	</select>
+	<!--获取行数，分页用-->
+	<select id="message.getCount" resultClass="int" parameterClass="java.lang.String">
+		select count(*) 
+		from message
+		where teacherId=#teacherId#
+	</select>
+	
+</sqlMap>

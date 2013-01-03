@@ -1,0 +1,64 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring"/> 
+	 <package name="teacher" namespace="/admin" extends="struts-default">
+		<action name="imageUpload" class="uploadAction" method="upload">
+			<interceptor-ref name="fileUpload">	
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"/>
+			<result name="success">/admin/addTeacher.jsp</result>
+		</action>
+		<action name="addTeacher" class="teacherAction" method="add">
+			<result name="success">/admin/success.jsp</result>
+			<result name="error">/admin/error.jsp</result>
+		</action>
+		<action name="listTeacher" class="teacherAction" method="list">
+			<result name="success">/admin/listTeacher.jsp</result>
+			<result name="error">/admin/error.jsp</result>
+		</action>
+		<action name="showTeacher" class="teacherAction" method="show">
+			<result name="success">/admin/showTeacher.jsp</result>
+			<result name="error">/admin/error.jsp</result>
+		</action>
+		<action name="editTeacher" class="teacherAction" method="edit">
+			<result name="success">/admin/editTeacher.jsp</result>
+			<result name="error">/admin/error.jsp</result>
+		</action>
+		<action name="updateTeacher" class="teacherAction" method="update">
+			<result name="success" type="redirect">/admin/listTeacher.action</result>
+			<result name="error">/admin/error.jsp</result>
+		</action>
+		<action name="deleteTeacher" class="teacherAction" method="delete">
+			<result name="success" type="redirect">/admin/listTeacher.action</result>
+			<result name="error">/admin/error.jsp</result>
+		</action>
+	</package>
+	<package name="vote" namespace="/admin" extends="struts-default">
+		<action name="statisticsVote" class="voteAction" method="statistics">
+			<result name="success" >/admin/statisticsVote.jsp</result>
+			<result name="error">/admin/error.jsp</result>
+		</action>
+		<action name="showVotes" class="voteAction" method="show">
+			<result name="success">/admin/listVote.jsp</result>
+			<result name="error">/admin/error.jsp</result>
+		</action>
+		<action name="exportVotes" class="voteAction" method="export">
+			<result name="success">/admin/success.jsp</result>
+			<result name="error">/admin/error.jsp</result>
+		</action>
+	</package>
+	
+	<package name="admin" namespace="/admin" extends="struts-default">
+		<action name="login" class="adminAction" method="login">
+			<result name="success" >/admin/index.html</result>
+			<result name="input">/admin/login.jsp</result>
+		</action>
+		<action name="changePassword" class="adminAction" method="changePassword">
+			<result name="success" >/admin/success.jsp</result>
+			<result name="error">/admin/error.jsp</result>
+		</action>
+	</package>
+	
+</struts>

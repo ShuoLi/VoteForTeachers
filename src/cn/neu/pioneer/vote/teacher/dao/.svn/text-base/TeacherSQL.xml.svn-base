@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+
+<sqlMap namespace="VOTE_TEACHER">
+	
+	<typeAlias alias="teacher" type="cn.neu.pioneer.vote.teacher.to.Teacher" />
+	<typeAlias alias="teachInfor" type="cn.neu.pioneer.vote.teacher.to.TeachInfor" />
+	
+   <resultMap id="get-teacher-result" class="teacher">
+		<result column="teacherId" property="teacherId" jdbcType="VARCHAR" />
+		<result column="teacherName" property="teacherName" jdbcType="VARCHAR" />
+		<result column="teacherGender" property="teacherGender" jdbcType="VARCHAR" />
+		<result column="teacherBirth" property="teacherBirth" jdbcType="VARCHAR" />
+		<result column="politicalStatus" property="politicalStatus" jdbcType="VARCHAR" />
+		<result column="recommendUnit" property="recommendUnit" jdbcType="VARCHAR" />
+		<result column="unit" property="unit" jdbcType="VARCHAR" />
+		<result column="position" property="position" jdbcType="VARCHAR" />
+		<result column="title" property="title" jdbcType="VARCHAR" />
+		<result column="teacherType" property="teacherType" jdbcType="VARCHAR" />
+		<result column="experience" property="experience" jdbcType="VARCHAR" />
+		<result column="outcomes" property="outcomes" jdbcType="VARCHAR" />
+		<result column="deeds" property="deeds" jdbcType="VARCHAR" />
+		<result column="comments" property="comments" jdbcType="VARCHAR" />
+		<result column="pic" property="pic" jdbcType="VARCHAR" />
+		<result column="{teacherId=teacherId}"  property="infors" select="getTeachInfors"/>
+	</resultMap> 
+	
+    <resultMap id="get-breif-teacher-result" class="teacher">
+		<result column="teacherId" property="teacherId" jdbcType="VARCHAR" />
+		<result column="teacherName" property="teacherName" jdbcType="VARCHAR" />
+		<result column="teacherGender" property="teacherGender" jdbcType="VARCHAR" />
+		<result column="teacherBirth" property="teacherBirth" jdbcType="VARCHAR" />
+		<result column="politicalStatus" property="politicalStatus" jdbcType="VARCHAR" />
+		<result column="recommendUnit" property="recommendUnit" jdbcType="VARCHAR" />
+		<result column="unit" property="unit" jdbcType="VARCHAR" />
+		<result column="position" property="position" jdbcType="VARCHAR" />
+		<result column="title" property="title" jdbcType="VARCHAR" />
+		<result column="teacherType" property="teacherType" jdbcType="VARCHAR" />
+		<result column="pic" property="pic" jdbcType="VARCHAR" />
+	</resultMap> 
+	
+    <resultMap id="get-teachInfor-result" class="teachInfor">
+    	<result column="teachInforId" property="teachInforId"/>
+    	<result column="period" property="period"/>
+    	<result column="content" property="content"/>
+    	<result column="teacherId" property="teacherId"/>
+    </resultMap>
+    
+     <select id="getTeachInfors" resultMap="get-teachInfor-result">
+    	select * from teachInfor
+    	where teacherId=#teacherId#
+     </select>
+    
+    <insert id="teacher.insert" parameterClass="teacher">
+		insert into teacher(teacherId,teacherName,teacherGender,teacherBirth,politicalStatus,
+		                    recommendUnit,unit,position,title,teacherType,experience,outcomes,deeds,comments,pic)
+		values(#teacherId#,#teacherName#,#teacherGender#,#teacherBirth#,#politicalStatus#, #recommendUnit#,
+		       #unit#,#position#,#title#,#teacherType#,#experience#,#outcomes#,#deeds#,#comments#,#pic#)
+	</insert>
+ 
+ 	<insert id="teacher.insertInfor" parameterClass="teachInfor">
+ 		insert into teachinfor(period,content,teacherId)
+ 		values(#period#,#content#,#teacherId#)
+ 	</insert>  
+ 	
+    <update id="teacher.update" parameterClass="teacher">
+		update teacher set
+			teacherName=#teacherName#,teacherGender=#teacherGender#,teacherBirth=#teacherBirth#,
+			politicalStatus=#politicalStatus#,recommendUnit=#recommendUnit#,unit=#unit#,
+			position=#position#,title=#title#,teacherType=#teacherType#,experience=#experience#,
+			outcomes=#outcomes#,deeds=#deeds#,comments=#comments#,pic=#pic#
+		where teacherId=#teacherId#
+	</update>
+
+	<update id="teacher.updateInfor" parameterClass="teachInfor">
+ 		update teachinfor set 
+ 		period=#period#,content=#content#
+ 		where teachInforId=#teachInforId#
+ 	</update>  
+ 	
+	<select id="teacher.getById" resultMap="get-teacher-result" parameterClass="java.lang.String">
+		select *
+		from teacher
+		where teacherId=#teacherId#
+	</select>
+	
+	<select id="teacher.getByName" resultMap="get-teacher-result" parameterClass="java.lang.String">
+		select *
+		from teacher
+		where teacherName=#teacherName#
+	</select>
+	
+	<delete id="teacher.delete" parameterClass="java.lang.String">
+		delete from teacher where teacherId=#teacherId#
+	</delete>
+	<select id="teacher.getList" resultMap="get-teacher-result" parameterClass="java.util.HashMap">
+		select * 
+		from teacher 
+		limit #start#,#count#
+	</select>
+	<select id="teacher.getBriefList" resultMap="get-breif-teacher-result" parameterClass="java.util.HashMap">
+		select teacherId,teacherName,teacherGender,teacherBirth,politicalStatus,recommendUnit,unit,position,title,teacherType,pic
+		from teacher 
+		limit #start#,#count#
+	</select>
+	<!--获取行数，分页用-->
+	<select id="teacher.getCount" resultClass="int">
+		select count(*) 
+		from teacher
+	</select>
+	
+</sqlMap>
+

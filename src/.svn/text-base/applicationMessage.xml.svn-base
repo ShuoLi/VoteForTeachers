@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+ "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	
+	<bean id="messageDao" class="cn.neu.pioneer.vote.message.dao.MessageDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"/>
+	</bean>
+	<bean id="messageManager" class="cn.neu.pioneer.vote.message.service.MessageManagerImpl">
+		<property name="messageDao" ref="messageDao"/>
+	</bean>
+	<bean id="messageAction" class="cn.neu.pioneer.vote.message.web.MessageAction" scope="prototype" >
+		<property name="messageManager" ref="messageManager"/>	
+	</bean>
+</beans>

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/vote/!svn/ver/138/src
+END
+applicationVote.xml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/vote/!svn/ver/26/src/applicationVote.xml
+END
+sqlMapConfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/vote/!svn/ver/29/src/sqlMapConfig.xml
+END
+struts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/vote/!svn/ver/138/src/struts.xml
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/vote/!svn/ver/44/src/applicationContext.xml
+END
+applicationMessage.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/vote/!svn/ver/58/src/applicationMessage.xml
+END
+applicationStudent.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/vote/!svn/ver/132/src/applicationStudent.xml
+END
+applicationAdmin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/vote/!svn/ver/29/src/applicationAdmin.xml
+END
+applicationTeacher.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/vote/!svn/ver/59/src/applicationTeacher.xml
+END

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+
+<sqlMap namespace="VOTE_STUDENT">
+	
+	<typeAlias alias="student" type="cn.neu.pioneer.vote.student.to.Student" />
+	
+    <resultMap id="get-student-result" class="student">
+    	<result column="studentId" property="studentId"/>
+        <result column="studentName" property="studentName"/>
+    </resultMap>
+
+	
+	<select id="student.getStudent" resultMap="get-student-result" parameterClass="student">
+		select * 
+		from student
+		where studentId=#studentId# and studentName=#studentName#
+	</select>
+	
+</sqlMap>

@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>AdminLoginPage</title>
+</head>
+<body>
+<form method ="post" action="login.action">
+Administrator:
+<input name="admin.adminName">
+<br>
+password:
+<input name="admin.password" type="password">
+<input type="submit" value="submit">
+</form>
+</body>
+</html>

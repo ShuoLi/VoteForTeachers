@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+
+<sqlMap namespace="VOTE_ADMIN">
+	
+	<typeAlias alias="admin" type="cn.neu.pioneer.vote.admin.to.Administrator" />
+	
+    <resultMap id="get-admin-result" class="admin">
+    	<result column="adminId" property="adminId"/>
+        <result column="adminName" property="adminName"/>
+        <result column="password" property="password"/>
+    </resultMap>
+
+	
+	<select id="admin.getAdmin" resultMap="get-admin-result" parameterClass="admin">
+		select * 
+		from admin
+		where adminName=#adminName# and password=#password#
+	</select>
+	<update id="admin.update"  parameterClass="java.lang.String">
+		update admin 
+		set password=#password#
+	</update>
+</sqlMap>

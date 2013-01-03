@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+
+<sqlMap namespace="VOTE_VOTE">
+	
+	<typeAlias alias="vote" type="cn.neu.pioneer.vote.vote.to.Vote" />
+	
+    <resultMap id="get-vote-result" class="vote">
+    	<result column="voteId" property="voteId"/>
+        <result column="teacherId" property="teacherId"/>
+    	<result column="studentId" property="studentId"/>
+    	<result column="time" property="time"/>
+    	<result column="ip" property="ip"/>
+    </resultMap>
+    
+    <resultMap id="get-vote-statistics" class="java.util.HashMap">
+    	<result column="teacherId" property="teacherId"/>
+        <result column="teacherName" property="teacherName"/>
+    	<result column="teacherGender" property="teacherGender"/>
+    	<result column="unit"  property="unit"/>
+    	<result column="teacherType"  property="teacherType"/>
+    	<result column="teacherBirth" property="teacherBirth" />
+		<result column="politicalStatus" property="politicalStatus" />
+		<result column="recommendUnit" property="recommendUnit"/>
+		<result column="unit" property="unit" />
+		<result column="position" property="position" />
+		<result column="title" property="title" />
+    </resultMap>
+    
+   
+    
+    <insert id="vote.insert" parameterClass="vote">
+		insert into vote(teacherId,studentId,time,ip)
+		values(#teacherId#,#studentId#,#time#,#ip#)
+	</insert>
+ 
+	
+	<select id="vote.getList" resultMap="get-vote-result" parameterClass="java.util.Map">
+		select * 
+		from vote
+		where teacherId=#teacherId# 
+		limit #start#,#count#
+	</select>
+	
+	<select id="vote.getByIp" resultMap="get-vote-result" parameterClass="java.lang.String">
+		select * 
+		from vote
+		where ip=#ip# 
+	</select>
+	
+	<select id="vote.getByStudent" resultMap="get-vote-result" parameterClass="java.lang.String">
+		select * 
+		from vote
+		where studentId=#studentId# 
+	</select>
+	
+	<select id="vote.getCount" resultClass="int" parameterClass="java.lang.String">
+		select count(*) 
+		from vote
+		where teacherId=#teacherId#
+	</select>
+	
+	<select id="vote.getStatistics" resultMap="get-vote-statistics"   parameterClass="java.util.Map">
+		select teacherId,teacherName,teacherGender,unit,teacherType,
+		       politicalStatus,recommendUnit,position,title,teacherBirth
+		from teacher
+		limit #start#,#count#
+	</select>
+	 
+
+	<select id="vote.getTotalCount" resultClass="int">
+		select count(*) 
+		from vote
+	</select>                           
+
+</sqlMap>

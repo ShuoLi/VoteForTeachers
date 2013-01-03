@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/vote/!svn/ver/137/src/cn/neu/pioneer/vote/teacher/dao
+END
+TeacherDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/vote/!svn/ver/137/src/cn/neu/pioneer/vote/teacher/dao/TeacherDaoImpl.java
+END
+ITeacherDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/vote/!svn/ver/49/src/cn/neu/pioneer/vote/teacher/dao/ITeacherDao.java
+END
+TeacherSQL.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/vote/!svn/ver/50/src/cn/neu/pioneer/vote/teacher/dao/TeacherSQL.xml
+END

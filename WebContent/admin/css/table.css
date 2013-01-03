@@ -1,0 +1,44 @@
+.hover{
+	background-color:#006666;
+	color:#ffffff;
+}
+tbody tr{
+	background-color:#EEEEEE;
+}
+table{
+	border:1px solid #c0c0c0;
+	width:100%;
+}
+
+td a{
+	text-decoration:none;
+	color:#000000;
+}
+
+td a img{
+	width:20px;
+	height:20px;
+}
+
+td{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+th{
+	background-color:#4D4C4C;
+	color:#ffffff;
+}
+
+#control{
+	text-align:right;
+	background-color:#c0c0c0;
+}
+
+h1{
+	font-style:italic;
+	size:60%;
+	color:#c0c0c0;
+	margin-bottom:4px;
+}

@@ -1,0 +1,71 @@
+/**
+ * 
+ */
+package cn.neu.pioneer.vote.admin.web;
+
+import cn.neu.pioneer.vote.admin.service.IAdministratorManager;
+import cn.neu.pioneer.vote.admin.to.Administrator;
+import cn.neu.pioneer.vote.web.BaseAction;
+
+/**
+ * @author changer
+ *
+ * Dec 13, 2009
+ */
+public class AdminAction extends BaseAction {
+<<<<<<< .mine
+	private Administrator admin ;
+	private IAdministratorManager adminManager;
+	private String newPassword;
+	private String secondPassword;
+	public String getNewPassword() {
+		return newPassword;
+	}
+	public void setNewPassword(String newPassword) {
+		this.newPassword = newPassword;
+	}
+	public void setSecondPassword(String secondPassword) {
+		this.secondPassword = secondPassword;
+	}
+	public String getSecondPassword() {
+		return secondPassword;
+	}
+
+=======
+	
+>>>>>>> .r39
+
+	
+	public Administrator getAdmin() {
+		return admin;
+	}
+	public void setAdmin(Administrator admin) {
+		this.admin = admin;
+	}
+	public void setAdminManager(IAdministratorManager adminManager) {
+		this.adminManager = adminManager;
+	}
+	public String login(){
+		try {
+			if(adminManager.exist(admin)){
+				this.getSession().put("admin", admin);
+				return SUCCESS;}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return INPUT;
+	}
+	
+	public String changePassword(){
+		try {	if(newPassword.equals(secondPassword)){
+				adminManager.updatePassword(newPassword);
+				return SUCCESS;}
+		} catch (Exception e) {
+				e.printStackTrace();
+			}
+		return ERROR;
+	}
+
+	
+	
+}

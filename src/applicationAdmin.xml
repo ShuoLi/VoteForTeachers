@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+ "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="adminDao" class="cn.neu.pioneer.vote.admin.dao.AdministratorDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"/>
+	</bean>
+	<bean id="adminManager" class="cn.neu.pioneer.vote.admin.service.AdministratorManagerImpl">
+		<property name="adminDao" ref="adminDao"/>
+	</bean>
+	
+	<bean id="adminAction" class="cn.neu.pioneer.vote.admin.web.AdminAction" scope="prototype" >
+		<property name="adminManager" ref="adminManager"/>	
+	</bean>
+</beans>

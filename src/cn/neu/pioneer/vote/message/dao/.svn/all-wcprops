@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/vote/!svn/ver/79/src/cn/neu/pioneer/vote/message/dao
+END
+IMessageDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/vote/!svn/ver/70/src/cn/neu/pioneer/vote/message/dao/IMessageDao.java
+END
+MessageSQL.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/vote/!svn/ver/79/src/cn/neu/pioneer/vote/message/dao/MessageSQL.xml
+END
+MessageDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/vote/!svn/ver/70/src/cn/neu/pioneer/vote/message/dao/MessageDaoImpl.java
+END

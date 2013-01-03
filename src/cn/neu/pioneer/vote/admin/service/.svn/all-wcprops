@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/vote/!svn/ver/29/src/cn/neu/pioneer/vote/admin/service
+END
+IAdministratorManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/vote/!svn/ver/29/src/cn/neu/pioneer/vote/admin/service/IAdministratorManager.java
+END
+AdministratorManagerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/vote/!svn/ver/29/src/cn/neu/pioneer/vote/admin/service/AdministratorManagerImpl.java
+END
